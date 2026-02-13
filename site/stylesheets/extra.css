@@ -1,9 +1,2 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap");
+/* Styling for Array Computing with Eigen course */
 
-:root {
-  --md-text-font: "Sora", sans-serif;
-}
-
-body {
-  font-family: "Sora", sans-serif;
-}
