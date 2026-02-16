@@ -89,6 +89,9 @@ extra_css = ["stylesheets/extra.css"]
 #
 #custom_dir = "overrides"
 
+# Use a custom logo from docs/images.
+logo = "images/naiss_logo_white.png"
+
 # With the "favicon" option you can set your own image to use as the icon
 # browsers will use in the browser title bar or tab bar. The path provided
 # must be relative to the "docs_dir".
@@ -296,8 +299,7 @@ code = "Jetbrains Mono"
 # - https://zensical.org/docs/setup/logo-and-icons
 # - https://zensical.org/docs/authoring/icons-emojis/#search
 # ----------------------------------------------------------------------------
-[project.theme.icon]
-logo = "images/naiss_logo_white.png"
+#[project.theme.icon]
 #repo = "lucide/smile"
 
 # ----------------------------------------------------------------------------
