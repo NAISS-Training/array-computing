@@ -42,6 +42,7 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Eigen3 REQUIRED)
+find_package(OpenMP)
 
 function(add_eigen_exe target)
 	add_executable(${target} ${ARGN})
@@ -65,6 +66,7 @@ set(SIMPLE_EXES
 	ex13
 	ex14
 	ex15
+	ex16_omp
 	matrix2_eig
 	eigen_c_arrays1
 )
@@ -72,6 +74,12 @@ set(SIMPLE_EXES
 foreach(exe IN LISTS SIMPLE_EXES)
 	add_eigen_exe(${exe} src/${exe}.cpp)
 endforeach()
+
+if(OpenMP_CXX_FOUND)
+	target_link_libraries(ex16_omp OpenMP::OpenMP_CXX)
+else()
+	message(WARNING "OpenMP not found: ex16_omp will build without OpenMP flags.")
+endif()
 
 set(CALFEM_EXES
 	live_coding
