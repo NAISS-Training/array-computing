@@ -296,8 +296,8 @@ code = "Jetbrains Mono"
 # - https://zensical.org/docs/setup/logo-and-icons
 # - https://zensical.org/docs/authoring/icons-emojis/#search
 # ----------------------------------------------------------------------------
-#[project.theme.icon]
-#logo = "lucide/smile"
+[project.theme.icon]
+logo = "images/naiss_logo_white.png"
 #repo = "lucide/smile"
 
 # ----------------------------------------------------------------------------
