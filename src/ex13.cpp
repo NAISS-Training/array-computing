@@ -30,5 +30,5 @@ int main()
 
     std::println("The relative error is: {}", (A * x - b).norm() / b.norm());
 
-    std::println("A * x = {}", A * x);
+    utils::print("A * x", A * x);
 }

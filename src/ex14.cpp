@@ -51,7 +51,7 @@ int main()
 
     Matrix3d I = Matrix3d::Identity();
 
-    std::println("(A-lambda1 * I) * v1 = {}", (A - lambda1 * I) * v1);
-    std::println("(A-lambda2 * I) * v2 = {}", (A - lambda2 * I) * v2);
-    std::println("(A-lambda3 * I) * v3 = {}", (A - lambda3 * I) * v3);
+    utils::print("(A-lambda1 * I) * v1", (A - lambda1 * I) * v1);
+    utils::print("(A-lambda2 * I) * v2", (A - lambda2 * I) * v2);
+    utils::print("(A-lambda3 * I) * v3", (A - lambda3 * I) * v3);
 }
