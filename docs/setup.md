@@ -11,7 +11,7 @@ All course source code is available at:
 
 It is also possible to use the following link for a web based setup in compiler explorer:
 
-- [Compiler explorer template setup](https://godbolt.org/z/nY1zjczo7)
+- [Compiler explorer template setup](https://godbolt.org/z/qYa6dTrqf)
 
 ## Quick start (recommended)
 
