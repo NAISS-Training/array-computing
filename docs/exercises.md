@@ -6,7 +6,7 @@ icon: lucide/list-checks
 
 Use the button below to open a template in Compiler Explorer with the Eigen library included. You can use this template to complete the exercises below.
 
-- [Open solution in Compiler Explorer](https://godbolt.org/z/M6hfa3Eac)
+- [Open solution template in Compiler explorer](https://godbolt.org/z/nY1zjczo7)
 - [Solutions](solutions.md)
 - [Use the template folder](setup.md#template-for-course-exercises) for local development
 

@@ -9,6 +9,10 @@ All course source code is available at:
 
 - [https://github.com/NAISS-Training/array-computing](https://github.com/NAISS-Training/array-computing)
 
+It is also possible to use the following link for a web based setup in compiler explorer:
+
+- [Compiler explorer template setup](https://godbolt.org/z/nY1zjczo7)
+
 ## Quick start (recommended)
 
 If you already have a C++ compiler and CMake installed, this is the fastest way to get started:
