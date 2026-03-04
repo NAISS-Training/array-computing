@@ -13,6 +13,7 @@ Use the button below to open a template in Compiler Explorer with the Eigen libr
 ## How to use this guide
 
 **In a 6-hour course**, we recommend:
+
 - **Lab sessions 1–2 (10:20–11:00, 13:00–13:40)**: Exercises 1–7 (Basic & Intermediate)
 - **Lab session 3 (14:20–15:00)**: Exercises 8–12 (Advanced operations) or continue with 1–7 if needed
 - **Self-study / extended practice**: Exercises 13–15 (Linear algebra & applications)
