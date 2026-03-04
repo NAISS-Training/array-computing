@@ -26,7 +26,7 @@ cmake --build build-release
 
 ## Minimum requirements
 
-- C++ compiler with C++23 support
+- C++ compiler with C++23 support (recommended: GCC 14 or newer, Clang 15 or newer, MSVC 19.36 or newer)
 - CMake (recommended: 3.24 or newer)
 - Eigen 3.4.x
 
@@ -89,11 +89,52 @@ The `Makefile` builds all configured examples in `src`.
 
 ### Linux (Ubuntu)
 
+!!! info "Ubuntu 24.04 note"
+
+    Ubuntu 24.04 commonly ships GCC 13 by default. While `-std=c++23` is accepted,
+    libstdc++ 13 may not provide all C++23 library headers (notably `<print>`), which can cause:
+
+    `fatal error: print: No such file or directory`
+
+    If you hit this, install and use GCC 14 (or newer).
+
 Install tools:
 
 ```bash
 sudo apt-get update
-sudo apt-get install -y g++ cmake libeigen3-dev
+sudo apt-get install -y g++ cmake libeigen3-dev gcc-14 g++-14
+```
+
+Validate both default compiler and GCC 14:
+
+```bash
+g++ --version
+g++-14 --version
+cmake --version
+```
+
+Build with GCC 14 explicitly (recommended on Ubuntu 24.04 when using C++23 library features such as `<print>`):
+
+```bash
+g++-14 -std=c++23 ex0.cpp -I/usr/include/eigen3 -o ex0
+./ex0
+```
+
+Optional: for a Makefile-based build, keep system defaults unchanged and set compiler per command:
+
+```bash
+make CXX=g++-14
+```
+
+Optional: switch system-wide default `gcc`/`g++` using `update-alternatives`:
+
+```bash
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 130
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-14 140
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 130
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-14 140
+sudo update-alternatives --config gcc
+sudo update-alternatives --config g++
 ```
 
 Validate tools:
@@ -231,6 +272,7 @@ Add your C++ file there and build it with the provided Makefile.
 ## Troubleshooting
 
 - **Eigen not found**: verify Eigen installation path and include directory (`-I.../eigen3`) or use `vcpkg` toolchain with CMake.
+- **`fatal error: print: No such file or directory` on Ubuntu 24.04**: GCC 13/libstdc++ may not yet ship `<print>`. Install `gcc-14`/`g++-14` and compile with `g++-14` (or `make CXX=g++-14`).
 - **Compiler does not support C++23**: check `g++ --version` (or your compiler version) and install a newer toolchain.
 - **CMake configure fails after dependency changes**: remove the build directory and configure again.
 - **Wrong generator/toolchain on Windows**: run from the correct Visual Studio developer prompt or use WSL.
