@@ -7,21 +7,40 @@ icon: lucide/list-checks
 Use the button below to open a template in Compiler Explorer with the Eigen library included. You can use this template to complete the exercises below.
 
 - [Open solution in Compiler Explorer](https://godbolt.org/z/M6hfa3Eac)
+- [Solutions](solutions.md)
+- [Use the template folder](setup.md#template-for-course-exercises) for local development
+
+## How to use this guide
+
+**In a 6-hour course**, we recommend:
+- **Lab sessions 1–2 (10:20–11:00, 13:00–13:40)**: Exercises 1–7 (Basic & Intermediate)
+- **Lab session 3 (14:20–15:00)**: Exercises 8–12 (Advanced operations) or continue with 1–7 if needed
+- **Self-study / extended practice**: Exercises 13–15 (Linear algebra & applications)
+
+**Prerequisites**: Complete exercises 1–3 before moving to exercises 4–7. Complete 1–7 before attempting 8–15.
+
+Difficulty legend: 🟢 **Beginner** | 🟡 **Intermediate** | 🔴 **Advanced**
 
 ## Basic Matrix and Vector Operations
 
 ### 1. Vector Creation and Access
+
+🟢 **Beginner** | ⏱️ 5 min
 
 - Create a 5-element vector using Eigen and initialize it with values 1 through 5.
 - Print the vector's elements and demonstrate how to access individual elements.
 
 ### 2. Matrix Initialization
 
+🟢 **Beginner** | ⏱️ 5 min
+
 - Create a 3x3 matrix with all elements set to zero.
 - Initialize a 2x4 matrix with specific values of your choice.
 - Print both matrices to verify their contents.
 
 ### 3. Basic Math Functions
+
+🟢 **Beginner** | ⏱️ 10 min
 
 - Create a vector with values ranging from -5 to 5.
 - Apply the absolute value, square root (for positive elements), and exponential functions.
@@ -34,11 +53,15 @@ Use the button below to open a template in Compiler Explorer with the Eigen libr
 
 ### 4. Coefficient-wise Operations
 
+🟡 **Intermediate** | ⏱️ 10 min
+
 - Create two vectors of the same length.
 - Perform element-wise multiplication, division, and power operations.
 - Calculate the dot product and compare with element-wise multiplication.
 
 ### 5. Matrix Operations
+
+🟡 **Intermediate** | ⏱️ 10 min
 
 - Create two 3x3 matrices with different values.
 - Perform and print the results of addition, subtraction, and element-wise multiplication.
@@ -46,11 +69,15 @@ Use the button below to open a template in Compiler Explorer with the Eigen libr
 
 ### 6. Vector-Matrix Operations
 
+🟡 **Intermediate** | ⏱️ 10 min
+
 - Create a 3x3 matrix and a 3-element vector.
 - Multiply the matrix by the vector and explain the result.
 - Experiment with different ways to perform the multiplication.
 
 ### 7. Special Matrix Operations
+
+🟡 **Intermediate** | ⏱️ 15 min
 
 - Create a 4x4 matrix and calculate its determinant, inverse, and transpose.
 - Verify that `A * A^-1` equals the identity matrix (within numerical precision).
@@ -63,6 +90,8 @@ Use the button below to open a template in Compiler Explorer with the Eigen libr
 
 ### 8. Block Operations
 
+🟡 **Intermediate** | ⏱️ 15 min
+
 - Create a 4x4 matrix with sequential numbers (1-16).
 - Extract the 2x2 block in the top-left corner.
 - Extract the 2x2 block in the bottom-right corner.
@@ -72,6 +101,8 @@ Use the button below to open a template in Compiler Explorer with the Eigen libr
     The `.block()` method can be used to extract a block from a matrix. The method takes four arguments: the row and column index of the top-left corner of the block, and the number of rows and columns in the block. For example, `A.block(0, 0, 2, 2)` will extract a 2x2 block from the top-left corner of the matrix `A`. It is also possible to assign a matrix using the `.block()` method. `A.block(0, 0, 2, 2) = B;` will replace the top-left 2x2 block in `A` with the matrix `B`.
 
 ### 9. Row and Column Operations
+
+🟡 **Intermediate** | ⏱️ 15 min
 
 - Create a 3x4 matrix with random values.
 - Extract the second row and third column.
@@ -83,6 +114,8 @@ Use the button below to open a template in Compiler Explorer with the Eigen libr
 
 ### 10. Resizing and Reshaping
 
+🟡 **Intermediate** | ⏱️ 10 min
+
 - Create a 2x3 matrix and then resize it to a 3x2 matrix.
 - Create a 6-element vector and reshape it into a 2x3 matrix.
 - Discuss what happens to the elements during these operations.
@@ -91,6 +124,8 @@ Use the button below to open a template in Compiler Explorer with the Eigen libr
     Use the `.reshaped()` method to reshape a matrix.
 
 ### 11. Concatenation
+
+🟡 **Intermediate** | ⏱️ 15 min
 
 - Create two 2x2 matrices.
 - Horizontally concatenate them to form a 2x4 matrix.
@@ -102,6 +137,8 @@ Use the button below to open a template in Compiler Explorer with the Eigen libr
 
 ### 12. Advanced Slicing
 
+🔴 **Advanced** | ⏱️ 20 min
+
 - Create a 5x5 matrix with sequential values.
 - Extract non-contiguous rows and columns (for example rows 1, 3, 4 and columns 0, 2).
 - Extract a diagonal or anti-diagonal of the matrix.
@@ -112,6 +149,8 @@ Use the button below to open a template in Compiler Explorer with the Eigen libr
 
 ### 13. Linear Algebra Operations
 
+🔴 **Advanced** | ⏱️ 20 min
+
 - Create a system of linear equations represented as `Ax = b`.
 - Solve the system using Eigen's solver capabilities.
 - Verify your solution by substituting it back into the original equations.
@@ -120,6 +159,8 @@ Use the button below to open a template in Compiler Explorer with the Eigen libr
     Use `.fullPivLu()` to solve a system of linear equations.
 
 ### 14. Eigenvalues and Eigenvectors
+
+🔴 **Advanced** | ⏱️ 20 min
 
 - Create a symmetric 3x3 matrix.
 - Calculate its eigenvalues and eigenvectors.
@@ -131,6 +172,8 @@ Use the button below to open a template in Compiler Explorer with the Eigen libr
 ## Practical Applications
 
 ### 15. Image Processing Basics
+
+🔴 **Advanced** | ⏱️ 30 min
 
 - Represent a grayscale image as an Eigen matrix.
 - Implement basic operations like brightness adjustment and contrast enhancement.
