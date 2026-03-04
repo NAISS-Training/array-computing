@@ -8,12 +8,12 @@ int main()
 {
     using namespace Eigen;
 
-    Matrix4d A;
+    MatrixXd A(100, 100);
     A.setRandom();
-    Vector4d b;
+    VectorXd b(100);
     b.setRandom();
 
-    Vector4d x = A.inverse() * b;
+    VectorXd x = A.colPivHouseholderQr().solve(b);
 
     double error = (A * x - b).norm();
     utils::print("Solution x", x);
